@@ -13,4 +13,4 @@ terraform {
     storage_account_name  = "terraformstateaz01"
     container_name        = "tfstatefiles"
     key                   = "terraform.tfstate"
-  } 
+  }
