@@ -1,0 +1,16 @@
+#! /bin/bash
+# This script is used to retrieve the metadata of the AWS instance.
+# version:0.1
+# Date: 09/03/2022
+#Author :Divya
+
+
+#variable declaration to list out each metadata name
+META_DATA=$(curl -s http://169.254.169.254/latest/meta-data/)
+
+#loop through each metadata names and print the key values
+for varname in $META_DATA
+do
+   echo -e "$varname: $(curl -s http://169.254.169.254/latest/meta-data/$varname)"
+
+done
